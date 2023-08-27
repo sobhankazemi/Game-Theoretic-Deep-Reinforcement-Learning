@@ -30,7 +30,7 @@ def load_obj(name):
 def init_file_name():
     dayTime = datetime.datetime.now().strftime('%Y-%m-%d')
     hourTime = datetime.datetime.now().strftime('%H-%M-%S')
-    pwd = "/home/neardws/Documents/Game-Theoretic-Deep-Reinforcement-Learning/Data/" + dayTime + '-' + hourTime
+    pwd = "/home/sobi/git/Game-Theoretic-Deep-Reinforcement-Learning/Data/" + dayTime + '-' + hourTime
 
     if not os.path.exists(pwd):
         os.makedirs(pwd)

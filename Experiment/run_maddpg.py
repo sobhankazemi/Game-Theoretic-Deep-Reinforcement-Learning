@@ -37,9 +37,11 @@ def main(_):
     # 0.6
     # environment_file_name = "/home/neardws/Documents/Game-Theoretic-Deep-Reinforcement-Learning/Data/task_number/0_6/convex_environment_05727ef5311540ca84b4c596a73987cd.pkl"
     # 0.7
-    environment_file_name = "/home/neardws/Documents/Game-Theoretic-Deep-Reinforcement-Learning/Data/task_number/0_7/convex_environment_c2ea75aa7cce404e9d9f8af15d49369f.pkl"
+    # environment_file_name = "/home/sobi/git/Game-Theoretic-Deep-Reinforcement-Learning/Data/task_number/0_7/convex_environment_c2ea75aa7cce404e9d9f8af15d49369f.pkl"
+    environment_file_name = "/home/sobi/git/Game-Theoretic-Deep-Reinforcement-Learning/Data/2023-08-23-20-05-09/convex_environment_a06c84b36b0d4300897033943ac82ca4.pkl"
     
     environment = load_obj(environment_file_name)
+    # environment = load_obj("")
     
     spec = make_environment_spec(environment)    
     

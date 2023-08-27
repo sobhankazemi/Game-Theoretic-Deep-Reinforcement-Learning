@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r"/home/neardws/Documents/Game-Theoretic-Deep-Reinforcement-Learning/")
+sys.path.append(r"/home/sobi/git/Game-Theoretic-Deep-Reinforcement-Learning/")
 
 from typing import Optional, List, Tuple
 import numpy as np
@@ -80,20 +80,20 @@ def get_default_environment(
     print("environment_config.reward_size: ", environment_config.reward_size)
     print("environment_config.critic_network_action_size: ", environment_config.critic_network_action_size)
     
-    # convexEnvironment = ConvexResourceAllocationEnv(
-    #     envConfig = environment_config,
-    #     time_slots = time_slots,
-    #     task_list = task_list,
-    #     vehicle_list = vehicle_list,
-    #     edge_list = edge_list,
-    #     distance_matrix = distance_matrix, 
-    #     channel_condition_matrix = channel_condition_matrix, 
-    #     vehicle_index_within_edges = vehicle_index_within_edges,
-    #     vehicle_observed_index_within_edges = vehicle_observed_index_within_edges,
-    #     flatten_space = flatten_space,
-    #     occuiped = occuiped,
-    #     for_mad5pg = for_mad5pg, 
-    # )
+    convexEnvironment = ConvexResourceAllocationEnv(
+        envConfig = environment_config,
+        time_slots = time_slots,
+        task_list = task_list,
+        vehicle_list = vehicle_list,
+        edge_list = edge_list,
+        distance_matrix = distance_matrix, 
+        channel_condition_matrix = channel_condition_matrix, 
+        vehicle_index_within_edges = vehicle_index_within_edges,
+        vehicle_observed_index_within_edges = vehicle_observed_index_within_edges,
+        flatten_space = flatten_space,
+        occuiped = occuiped,
+        for_mad5pg = for_mad5pg, 
+    )
     
     # randomEnvironment = RandomResourceAllocationEnv(
     #     envConfig = environment_config,
@@ -155,31 +155,31 @@ def get_default_environment(
     #     for_mad5pg = for_mad5pg, 
     # )
     
-    globalActionEnv = GlobalActionEnv(
-        envConfig = environment_config,
-        time_slots = time_slots,
-        task_list = task_list,
-        vehicle_list = vehicle_list,
-        edge_list = edge_list,
-        distance_matrix = distance_matrix, 
-        channel_condition_matrix = channel_condition_matrix, 
-        vehicle_index_within_edges = vehicle_index_within_edges,
-        vehicle_observed_index_within_edges = vehicle_observed_index_within_edges,
-        flatten_space = flatten_space,
-        occuiped = occuiped,
-        for_mad5pg = for_mad5pg, 
-    )
+    # globalActionEnv = GlobalActionEnv(
+    #     envConfig = environment_config,
+    #     time_slots = time_slots,
+    #     task_list = task_list,
+    #     vehicle_list = vehicle_list,
+    #     edge_list = edge_list,
+    #     distance_matrix = distance_matrix, 
+    #     channel_condition_matrix = channel_condition_matrix, 
+    #     vehicle_index_within_edges = vehicle_index_within_edges,
+    #     vehicle_observed_index_within_edges = vehicle_observed_index_within_edges,
+    #     flatten_space = flatten_space,
+    #     occuiped = occuiped,
+    #     for_mad5pg = for_mad5pg, 
+    # )
     
     file_name = init_file_name()
     # save_obj(randomEnvironment, file_name["random_environment_name"])
-    # save_obj(convexEnvironment, file_name["convex_environment_name"])
+    save_obj(convexEnvironment, file_name["convex_environment_name"])
     # save_obj(localEnvironment, file_name["local_environment_name"])
     # save_obj(edgeEnvironment, file_name["edge_environment_name"])
     # save_obj(oldEnvironment, file_name["old_environment_name"])
-    save_obj(globalActionEnv, file_name["global_environment_name"])
+    # save_obj(globalActionEnv, file_name["global_environment_name"])
 
 if __name__ == "__main__":
     # for d4pg
-    get_default_environment(flatten_space=True)
+    # get_default_environment(flatten_space=True)
     # for mad4pg
-    # get_default_environment(for_mad5pg=True)
+    get_default_environment(for_mad5pg=True)

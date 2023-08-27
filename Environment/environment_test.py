@@ -1,6 +1,6 @@
 
 import sys
-sys.path.append(r"/home/neardws/Documents/Game-Theoretic-Deep-Reinforcement-Learning/")
+sys.path.append(r"/home/sobi/git/Game-Theoretic-Deep-Reinforcement-Learning/")
 from acme import types
 import tree
 import numpy as np

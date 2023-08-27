@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r"/home/neardws/Documents/Game-Theoretic-Deep-Reinforcement-Learning/")
+sys.path.append(r"/home/sobi/git/Game-Theoretic-Deep-Reinforcement-Learning/")
 from Environment.utilities import vehicleTrajectoriesProcessor
 
 if __name__ == "__main__":
@@ -7,9 +7,9 @@ if __name__ == "__main__":
     trajectories_file_name: str = 'CSV/gps_20161116'
     longitude_min: float = 104.04565967220308
     latitude_min: float = 30.654605745741608
-    trajectories_time_start: str = '2016-11-16 23:00:00'
-    trajectories_time_end: str = '2016-11-16 23:05:00'
-    trajectories_out_file_name: str = 'CSV/trajectories_20161116_2300_2305'
+    trajectories_time_start: str = '2016-11-16 13:00:00'
+    trajectories_time_end: str = '2016-11-16 13:05:00'
+    trajectories_out_file_name: str = 'CSV/trajectories_20161116_1300_1305'
     edge_number: int = 9
     communication_range: float = 500
     

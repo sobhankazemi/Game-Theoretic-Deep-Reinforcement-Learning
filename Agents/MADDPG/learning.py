@@ -67,7 +67,7 @@ class DDPGLearner(acme.Learner):
         """Initializes the learner.
 
         Args:
-        policy_network: the online (optimized) policy.
+        policy_netwDocumentsork: the online (optimized) policy.
         critic_network: the online critic.
         target_policy_network: the target policy (which lags behind the online
             policy).

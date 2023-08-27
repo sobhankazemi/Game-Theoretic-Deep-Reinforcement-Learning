@@ -1,13 +1,16 @@
 import sys
-sys.path.append(r"/home/neardws/Documents/Game-Theoretic-Deep-Reinforcement-Learning/")
+sys.path.append(r"/home/sobi/git/Game-Theoretic-Deep-Reinforcement-Learning/")
 from absl import app
 import tensorflow as tf
+import os
+# os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 gpus = tf.config.experimental.list_physical_devices('GPU')
+# print(gpus)
 memory_limit=4 * 1024
 tf.config.experimental.set_virtual_device_configuration(gpus[0], 
     [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=memory_limit)])
-tf.config.experimental.set_virtual_device_configuration(gpus[1], 
-    [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=memory_limit)])
+# tf.config.experimental.set_virtual_device_configuration(gpus[1], 
+#     [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=memory_limit)])
 
 from Experiment import run_maddpg
 from Experiment import run_mad4pg
